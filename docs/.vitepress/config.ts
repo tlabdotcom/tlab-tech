@@ -22,7 +22,8 @@ export default defineConfig({
         {
           text: 'Guidelines',
           items: [
-            {text: 'REST API', link: '/documentation/rest/'}
+            {text: 'REST API', link: '/documentation/rest/'},
+            {text: 'Semantic Versioning', link: '/documentation/semver/'}
           ]
         }
       ]
