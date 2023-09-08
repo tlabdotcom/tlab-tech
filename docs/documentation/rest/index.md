@@ -21,9 +21,9 @@ This facilitates discovery and eases adoption on platforms without a well-suppor
 
 An example of a well-structured URL is:
 
-`https://{host}/{version}/{service-name}/{api-function}`
+`https://{host}/{version}/{service-name}/{collection}/{operation}`
 
-`https://api.zoo.com/v1/animal-service/cats`
+`https://api.zoo.com/v1/animal-service/cats/create`
 
 An example URL that is not friendly is:
 
@@ -140,14 +140,14 @@ Example:
 
 * `POST` **Add new cat**
 
-    Endpoint: `/cats`
+    Endpoint: `/cats/create`
     
     API to add a new cat.
     
     Example request:
     
     ```bash
-    curl --location -g '{{url}}/v1/animal-service/cats' \
+    curl --location -g '{{url}}/v1/animal-service/cats/create' \
     --header 'Content-Type: application/json' \
     --data '{
         "name": "Taco",
@@ -172,14 +172,14 @@ Example:
   
 * `PUT` **Update cat details**
 
-    Endpoint: `/cats/:id`
+    Endpoint: `/cats/update/:id`
     
     Update details of a cat, identified by `id`
     
     Example request:
     
     ```bash
-    curl --location -g --request PUT '{{url}}/v1/animal-service/cats/1' \
+    curl --location -g --request PUT '{{url}}/v1/animal-service/cats/update/1' \
     --header 'Content-Type: application/json' \
     --data '{
         "name": "Fury",
@@ -204,14 +204,14 @@ Example:
 
 * `DELETE` **Delete cat details**
 
-    Endpoint: `/cats/:id`
+    Endpoint: `/cats/delete/:id`
     
     Delete details of a cat, identified by `id`
     
     Example request:
     
     ```bash
-    curl --location -g --request DELETE '{{url}}/v1/animal-service/cats/1'
+    curl --location -g --request DELETE '{{url}}/v1/animal-service/cats/delete/1'
     ```
     
     Example response:
@@ -287,4 +287,184 @@ Example:
 
 Use a unique query parameter for each field that implements filtering. 
 For example, when requesting a list of tickets from the /cats endpoint, you may want to limit these to only those with color white. This could be accomplished with a request like GET /cats?breed=birman. 
-Here, the breed is a query parameter that implements a filter
+Here, the breed is a query parameter that implements a filter.
+
+Example:
+
+* `GET` **Filter cats by name**
+  
+  Endpoint: `{{url}}/cats?breed={{breedName}}`
+  
+  Params:
+
+| name  | value   | description                                 |
+|-------|---------|---------------------------------------------|
+| breed | persian | string                                      |
+| owner | 1,2     | use seperated by coma if use multiple value |
+
+  Example Request:
+
+  ```bash
+  curl --location -g '{{url}}/cats?breed=birman'
+  ```
+
+  Example Response:
+
+  ```json
+  {
+  "code": 200,
+  "message": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "Sully",
+      "breed": "Birman",
+      "owner": {
+        "id": 1,
+        "name": "John Doe"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Snowball",
+      "breed": "Birman",
+      "owner": {
+        "id": 12,
+        "name": "Stuart Little"
+      }
+    }
+  ]
+}
+  ```
+
+### 4.3 Sorting
+
+A generic parameter `sort_by` can be used to describe sorting by fields. 
+Accommodate complex sorting requirements by letting the sort parameter take in a list of comma separated fields.
+A generic parameter `sort` can be used to describe sorting direction `ASC` or `DESC`.
+
+Example:
+
+  * `GET` **Fetch cats, sorted by name (ascending or descending)**
+
+    Endpoint: `{{url}}/cats?sort_by=name&sort=asc`
+
+    Params:
+
+| name    | value      | description                          |
+|---------|------------|--------------------------------------|
+| sort_by | name,id    | seperated by comma if multiple value |
+| sort    | asc / desc | sorting direction                    |
+
+
+  Example Request:
+
+  ```bash
+  curl --location -g '{{url}}/cats?sort_by=name&sort=asc'
+  ```
+
+  Example Response:
+
+  ```json
+  {
+  "code": 200,
+  "message": "success",
+  "data": [
+    {
+      "id": 5,
+      "name": "Amy",
+      "breed": "Birman",
+      "owner": {
+        "id": 12,
+        "name": "Stuart Little"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Snowball",
+      "breed": "Birman",
+      "owner": {
+        "id": 12,
+        "name": "Stuart Little"
+      }
+    },
+    {
+      "id": 1,
+      "name": "Taco",
+      "breed": "Abyssinian",
+      "owner": {
+        "id": 1,
+        "name": "John Doe"
+      }
+    }
+  ]
+}
+  ```
+
+### 4.4 Pagination
+
+It is almost never a good idea to return all resources of your database at once. 
+Consequently, you should provide a pagination mechanism. 
+A really simple approach is to use the parameters offset and limit, which are well-known from databases.
+
+Example:
+
+  * `GET` Fetch cats
+
+    `{{url}}/cats?page=1&limit=10`
+
+    API to fetch cats using paginated API. If the client omits the parameter you should use defaults (like offset=0 and limit=10)
+
+    Params:
+
+| name  | value                                               |
+|-------|-----------------------------------------------------|
+| page  | 1<br/> List offset                                  |
+| limit | 10<br/>Max number of items that respnse should have |
+
+Example Request:
+
+```bash
+curl --location -g '{{url}}/cats?offset=1&limit=3'
+```
+
+Example Response:
+
+```json
+{
+  "total_data": 42,
+  "total_page": 5,
+  "current_page": 1,
+  "page_size": 10,
+  "data": [
+    {
+      "id": 1,
+      "name": "Taco",
+      "breed": "Abyssinian",
+      "owner": {
+        "id": 1,
+        "name": "John Doe"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Snowball",
+      "breed": "Birman",
+      "owner": {
+        "id": 12,
+        "name": "Stuart Little"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Fury",
+      "breed": "Birman",
+      "owner": {
+        "id": 12,
+        "name": "Stuart Little"
+      }
+    }
+  ]
+}
+```
+
