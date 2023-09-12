@@ -468,3 +468,66 @@ Example Response:
 }
 ```
 
+## 5. Status Code
+
+When the client raises a request to the server through an API, 
+the client should know the feedback, whether it failed, passed or the request was wrong. 
+HTTP status codes are a bunch of standardized codes which has various explanations in various scenarios. 
+The server should always return the right status code.
+
+* **200 OK** - Response to a successful GET, PUT, PATCH or DELETE. Can also be used for a POST that doesn't result in a creation.
+* **201 Created** - Response to a POST that results in a creation. Should be combined with a Location header pointing to the location of the new resource
+* **204 No Content** - Response to a successful request that won't be returning a body (like a DELETE request)
+* **304 Not Modified** - Used when HTTP caching headers are in play
+* **400 Bad Request** - The request is malformed, such as if the body does not parse
+* **401 Unauthorized** - When no or invalid authentication details are provided. Also useful to trigger an auth popup if the API is used from a browser
+* **403 Forbidden** - When authentication succeeded but authenticated user doesn't have access to the resource
+* **404 Not Found** - When a non-existent resource is requested
+* **405 Method Not Allowed** - When an HTTP method is being requested that isn't allowed for the authenticated user
+* **410 Gone** - Indicates that the resource at this end point is no longer available. Useful as a blanket response for old API versions
+* **415 Unsupported Media Type** - If incorrect content type was provided as part of the request
+* **422 Unprocessable Entity** - Used for validation errors
+* **429 Too Many Requests** - When a request is rejected due to rate limiting
+* **500 Internal Server Error** - This is either a system or application error, and generally indicates that although the client appeared to provide a correct request, something unexpected has gone wrong on the server
+* **503 Service Unavailable** - The server is unable to handle the request for a service due to temporary maintenance
+
+## 6. Errors
+
+Just like an HTML error page shows a useful error message to a visitor, an API should provide a useful error message in a known consumable format. 
+The representation of an error should be no different than the representation of any resource, just with its own set of fields.
+
+The API should always return sensible HTTP status codes. 
+API errors typically break down into 2 types: 400 series status codes for client issues & 500 series status codes for server issues. 
+At a minimum, the API should standardize that all 400 series errors come with consumable JSON error representation. 
+If possible (i.e. if load balancers & reverse proxies can create custom error bodies), this should extend to 500 series status codes.
+
+A JSON error body should provide a few things for the developer - a useful error message, a unique error code (that can be looked up for more details in the docs) and possibly a detailed description. 
+JSON output representation for something like this would look like:
+
+```json
+{
+  "code" : 401,
+  "message" : "Something bad happened :(",
+  "errors" : "More details about the error here"
+}
+```
+
+Validation errors for PUT, PATCH and POST requests will need a field breakdown. 
+This is best modeled by using a fixed top-level error code for validation failures and providing the detailed errors in an additional errors field, like so:
+
+```json
+{
+  "code" : 422,
+  "message" : "Validation Failed",
+  "errors" : [
+    {
+      "field" : "first_name",
+      "message" : "First name cannot have fancy characters"
+    },
+    {
+       "field" : "password",
+       "message" : "Password cannot be blank"
+    }
+  ]
+}
+```
