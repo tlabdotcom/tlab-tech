@@ -16,18 +16,23 @@ export default defineConfig({
         {
           text: 'Intro',
           items: [
-            {text: 'Backend Engineer', link: '/documentation/'}
+            { text: 'Backend Engineer', link: '/documentation/' }
           ]
         },
         {
           text: 'Guidelines',
           items: [
-            {text: 'REST API', link: '/documentation/rest/'},
-            {text: 'Semantic Versioning', link: '/documentation/semver/'}
+            { text: 'REST API', link: '/documentation/rest/' },
+            { text: 'Semantic Versioning', link: '/documentation/semver/' }
           ]
         }
       ]
     },
+
+    search: {
+      provider: 'local'
+    },
+
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }

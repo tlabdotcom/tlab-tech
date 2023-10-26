@@ -105,19 +105,19 @@ Example:
     Example response:
     
     ```json
-        {
-          "code": 200,
-          "message": "success",
-          "data": {
-            "id": 2,
-            "name": "Snowball",
-            "breed": "Birman",
-            "owner": {
-              "id": 12,
-              "name": "Stuart Little"
-            }
-          }
+    {
+      "code": 200,
+      "message": "success",
+      "data": {
+        "id": 2,
+        "name": "Snowball",
+        "breed": "Birman",
+        "owner": {
+          "id": 12,
+          "name": "Stuart Little"
         }
+      }
+    }
     ```
 
 ## 3. HTTP Method
@@ -312,29 +312,29 @@ Example:
 
   ```json
   {
-  "code": 200,
-  "message": "success",
-  "data": [
-    {
-      "id": 1,
-      "name": "Sully",
-      "breed": "Birman",
-      "owner": {
+    "code": 200,
+    "message": "success",
+    "data": [
+      {
         "id": 1,
-        "name": "John Doe"
+        "name": "Sully",
+        "breed": "Birman",
+        "owner": {
+          "id": 1,
+          "name": "John Doe"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Snowball",
+        "breed": "Birman",
+        "owner": {
+          "id": 12,
+          "name": "Stuart Little"
+        }
       }
-    },
-    {
-      "id": 2,
-      "name": "Snowball",
-      "breed": "Birman",
-      "owner": {
-        "id": 12,
-        "name": "Stuart Little"
-      }
-    }
-  ]
-}
+    ]
+  }
   ```
 
 ### 4.3 Sorting
@@ -367,38 +367,38 @@ Example:
 
   ```json
   {
-  "code": 200,
-  "message": "success",
-  "data": [
-    {
-      "id": 5,
-      "name": "Amy",
-      "breed": "Birman",
-      "owner": {
-        "id": 12,
-        "name": "Stuart Little"
-      }
-    },
-    {
-      "id": 2,
-      "name": "Snowball",
-      "breed": "Birman",
-      "owner": {
-        "id": 12,
-        "name": "Stuart Little"
-      }
-    },
-    {
-      "id": 1,
-      "name": "Taco",
-      "breed": "Abyssinian",
-      "owner": {
+    "code": 200,
+    "message": "success",
+    "data": [
+      {
+        "id": 5,
+        "name": "Amy",
+        "breed": "Birman",
+        "owner": {
+          "id": 12,
+          "name": "Stuart Little"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Snowball",
+        "breed": "Birman",
+        "owner": {
+          "id": 12,
+          "name": "Stuart Little"
+        }
+      },
+      {
         "id": 1,
-        "name": "John Doe"
+        "name": "Taco",
+        "breed": "Abyssinian",
+        "owner": {
+          "id": 1,
+          "name": "John Doe"
+        }
       }
-    }
-  ]
-}
+    ]
+  }
   ```
 
 ### 4.4 Pagination
@@ -432,39 +432,43 @@ Example Response:
 
 ```json
 {
-  "total_data": 42,
-  "total_page": 5,
-  "current_page": 1,
-  "page_size": 10,
-  "data": [
-    {
-      "id": 1,
-      "name": "Taco",
-      "breed": "Abyssinian",
-      "owner": {
+  "code": 200,
+  "message": "success",
+  "data": {
+    "page": 1,
+    "limit": 10,
+    "total_items": 42,
+    "total_page": 5,
+    "items": [
+      {
         "id": 1,
-        "name": "John Doe"
+        "name": "Taco",
+        "breed": "Abyssinian",
+        "owner": {
+          "id": 1,
+          "name": "John Doe"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Snowball",
+        "breed": "Birman",
+        "owner": {
+          "id": 12,
+          "name": "Stuart Little"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Fury",
+        "breed": "Birman",
+        "owner": {
+          "id": 12,
+          "name": "Stuart Little"
+        }
       }
-    },
-    {
-      "id": 2,
-      "name": "Snowball",
-      "breed": "Birman",
-      "owner": {
-        "id": 12,
-        "name": "Stuart Little"
-      }
-    },
-    {
-      "id": 3,
-      "name": "Fury",
-      "breed": "Birman",
-      "owner": {
-        "id": 12,
-        "name": "Stuart Little"
-      }
-    }
-  ]
+    ]
+  }
 }
 ```
 
