@@ -23,7 +23,8 @@ export default defineConfig({
           text: 'Guidelines',
           items: [
             { text: 'REST API', link: '/documentation/rest/' },
-            { text: 'Semantic Versioning', link: '/documentation/semver/' }
+            { text: 'Semantic Versioning', link: '/documentation/semver/' },
+            { text: 'Format Database', link: '/documentation/database_format/' }
           ]
         }
       ]
