@@ -98,4 +98,12 @@ Pemilihan *naming convention* dapat menjadi isu yang kontroversial karena masing
 </table>
 
 Reference
-- https://en.wikipedia.org/wiki/Naming_convention_(programming)
+* Wikipedia - [Naming Convention (Programming)](https://en.wikipedia.org/wiki/Naming_convention_(programming))
+* Python - [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/)
+* Vue.js - [Style Guide](https://vuejs.org/style-guide/)
+* JavaScript - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+* Java - [Java style guide](https://www.cs.cornell.edu/courses/JavaAndDS/JavaStyle.html)
+* C# -[ C# Coding Convention](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+* Go - [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md)
+* C++ [- C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
+* PHP - [PSR-12: Extended Coding Style](https://www.php-fig.org/psr/psr-12/)
