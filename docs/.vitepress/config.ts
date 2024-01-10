@@ -13,10 +13,13 @@ export default defineConfig({
 
     sidebar: {
       '/documentation': [
+        { text: 'Intro', link: '/documentation/' },
         {
-          text: 'Intro',
+          text: 'Team',
           items: [
-            { text: 'Backend Engineer', link: '/documentation/' }
+            { text: 'Backend Engineer', link: '/documentation/team/backend.md' },
+            { text: 'Frontend Engineer', link: '/documentation/team/frontend.md' },
+            { text: 'Fullstack Engineer', link: '/documentation/team/fullstack.md' }
           ]
         },
         {
