@@ -25,7 +25,8 @@ export default defineConfig({
             { text: 'REST API', link: '/documentation/rest/' },
             { text: 'Semantic Versioning', link: '/documentation/semver/' },
             { text: 'Format Database', link: '/documentation/database-format/' },
-            { text: 'Naming Convention', link: '/documentation/naming-convention/' }
+            { text: 'Naming Convention', link: '/documentation/naming-convention/' },
+            { text: 'Conventional Commits', link: '/documentation/conventional-commits/' }
           ]
         }
       ]

@@ -17,18 +17,85 @@ Alasan menggunakan *naming convention* :
 
 Pemilihan *naming convention* dapat menjadi isu yang kontroversial karena masing-masing developer menganggap standar mereka sebagai yang terbaik. Maka dari itu kami telah melakukan voting dari beberapa developer dan berikut hasilnya:
 
-
-| Identifier type    	| Rules for naming	| Examples                                                           							|
-|-----------------------|-------------------|-----------------------------------------------------------------------------------------------|
-| Classes / Interface	| <code>PascalCase</code>		| <ul><li><code>class User {}</code></li><li><code>class ProductCart {}</code></li></ul>		|
-| Methods / Function   	| <code>camelCase</code>		 	| <ul><li><code>run();</code></li><li><code>getBackground();</code></li></ul>	 				|
-| Variables          	| <code>snake_case</code> 		| <ul><li><code>var limit = 10;</code></li><li><code>let data_product = [];</code></li></ul>	|
-| File 				 	| <code>PascalCase</code> for <code>.vue</code>, <code>.py</code> 	| <ul><li><code>Form.vue</code></li><li><code>ErrorRepository.py</code></li></ul> 				|
-|  				 	| <code>camelCase</code> for <code>.ts</code>, <code>.js</code>		| <ul><li><code>config.ts</code></li><li><code>scrollBehavior.js</code></li></ul> 				|
-| Folder 				 	| <code>PascalCase</code> for Python 	| <ul><li><code>SupportModule</code></li><li><code>Repositories</code></li></ul> 				|
-|  				 	| <code>kebab-case</code> for Javascript		| <ul><li><code>custom-library</code></li><li><code>layout-structure</code></li></ul> 				|
-
-<!-- | File 				 	| KebabCase 		| <ul><li><code>user-profile.js</code></li><li><code>package-lock.json</code></li></ul>        	| -->
+<table>
+	<thead>
+		<tr>
+			<th>Identifier type</th>
+			<th>Rules for naming</th>
+			<th>Examples</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Classes / Interface</td>
+			<td><code>PascalCase</code></td>
+			<td>
+				<ul>
+					<li><code>class User {}</code></li>
+					<li><code>class ProductCart {}</code></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Methods / Function</td>
+			<td><code>camelCase</code></td>
+			<td>
+				<ul>
+					<li><code>run();</code></li>
+					<li><code>getBackground();</code></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Variables</td>
+			<td><code>snake_case</code></td>
+			<td>
+				<ul>
+					<li><code>var limit = 10;</code></li>
+					<li><code>let data_product = [];</code></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2">File</td>
+			<td><code>PascalCase</code> for <code>.vue</code>, <code>.py</code></td>
+			<td>
+				<ul>
+					<li><code>Form.vue</code></li>
+					<li><code>ErrorRepository.py</code></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><code>camelCase</code> for <code>.ts</code>, <code>.js</code></td>
+			<td>
+				<ul>
+					<li><code>config.ts</code></li>
+					<li><code>scrollBehavior.js</code></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Folder</td>
+			<td><code>kebab-case</code> for Javascript</td>
+			<td>
+				<ul>
+					<li><code>custom-library</code></li>
+					<li><code>layout-structure</code></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><code>PascalCase</code> for Python</td>
+			<td>
+				<ul>
+					<li><code>SupportModule</code></li>
+					<li><code>Repositories</code></li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 Reference
 - https://en.wikipedia.org/wiki/Naming_convention_(programming)
