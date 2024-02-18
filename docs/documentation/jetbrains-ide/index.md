@@ -84,7 +84,26 @@ $ sudo docker ps
 
 Jika berhasil perintah diatas akan menampilkan docker container yang sedang berjalan di laptop kita. Jika belum berhasil, jangan malu-malu untuk bertanya ke chapter lead / sobat amazing lainnya.
 
-### 4. Install Aplikasi JetBrains
+### 4. Copy Project ke User Baru
+
+Setelah semua step by step dilakukan, kita perlu mengcopy project yang ada di user lama ke dalam folder home user baru kita.
+Kita perlu login menggunakan user baru yang telah kita buat sebelumnya yaitu `developer` lalu ketikkan perintah berikut:
+
+```bash
+$ sudo cp -r /home/old_username/NodeProjects /home/developer/NodeProjects
+```
+
+Jika berhasil maka folder `NodeProjects` beserta dengan isinya akan muncul di directory `/home/developer`, tetapi kita perlu merubah
+ownership dari folder / file yang kita copy dari user lain supaya kita bisa melakukan modifikasi di folder / file tersebut.
+untuk mengubah ownership ketikkan perintah berikut:
+
+```bash
+$ chown -R developer:developer NodeProjects
+```
+
+Ulangi step-step diatas jika ingin mengopy folder / file lainnya.
+
+### 5. Install Aplikasi JetBrains
 
 JetBrains menyediakan bermacam variant produk *IDE*, tetapi yang paling sering digunakan adalah:
 
@@ -97,3 +116,10 @@ Cara instalasi JetBrains IDE di linux dapat dilakukan dengan berbagai macam cara
 
 ## Windows
 TBC
+
+## Refrensi
+
+* [Ubuntu User Management](https://ubuntu.com/server/docs/security-users)
+* [Debian User Management](https://vitux.com/how-to-manage-user-accounts-in-debian-10/)
+* [Fedora User Management](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/basic-system-configuration/Managing_Users_and_Groups/)
+* [ArchLinux User Management](https://linuxhint.com/add_users_arch_linux/)
