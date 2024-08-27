@@ -54,7 +54,8 @@ export default defineConfig({
         {
           text: 'Cheet Sheet',
           items: [
-            { text: 'Linux Command', link: '/documentation/cheatset/linux-command'}
+            { text: 'Linux Command', link: '/documentation/cheatset/linux-command'},
+            { text: 'Git Command', link: '/documentation/cheatset/git-command'},
           ]
         }
       ]
