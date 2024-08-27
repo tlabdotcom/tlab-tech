@@ -50,6 +50,12 @@ export default defineConfig({
             { text: 'Conventional Commits', link: '/documentation/conventional-commits/' },
             { text: 'Penggunaan JetBrains IDE', link: '/documentation/jetbrains-ide/' }
           ]
+        },
+        {
+          text: 'Cheet Sheet',
+          items: [
+            { text: 'Linux Command', link: '/documentation/cheatset/linux-command'}
+          ]
         }
       ]
     },
