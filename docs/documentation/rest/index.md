@@ -21,9 +21,9 @@ This facilitates discovery and eases adoption on platforms without a well-suppor
 
 An example of a well-structured URL is:
 
-`https://{host}/{version}/{service-name}/{collection}/{operation}`
+`https://{host}/{collection}/{operation}`
 
-`https://api.zoo.com/v1/animal-service/cats/create`
+`https://api.zoo.com/cats/create`
 
 An example URL that is not friendly is:
 
@@ -425,7 +425,7 @@ Example:
 Example Request:
 
 ```bash
-curl --location -g '{{url}}/cats?offset=1&limit=3'
+curl --location -g '{{url}}/cats?page=1&limit=3'
 ```
 
 Example Response:
@@ -510,9 +510,8 @@ JSON output representation for something like this would look like:
 
 ```json
 {
-  "code" : 401,
-  "message" : "Something bad happened :(",
-  "errors" : "More details about the error here"
+  "code" : 409,
+  "message" : "Data already exists"
 }
 ```
 
