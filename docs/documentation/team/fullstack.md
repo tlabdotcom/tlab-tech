@@ -12,8 +12,10 @@ More information about fullstack path - [roadmap.sh](https://roadmap.sh/full-sta
 
 ## Read More, Learn More!
 ### General
+* [100+ Web Development Things you Should Know](https://youtu.be/erEgovG9WBs?si=WPCSPyNUAZSrNwmd)
 * [Code Review Best Practices](https://roadmap.sh/best-practices/code-review)
 ### Backend
+* [Backend Performance Best Practices](https://roadmap.sh/best-practices/backend-performance)
 * [API Security Best Practices](https://roadmap.sh/best-practices/api-security)
 ### Frontend
 * [Frontend Performance Best Practices](https://roadmap.sh/best-practices/frontend-performance)
