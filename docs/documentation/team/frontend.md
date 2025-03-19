@@ -6,10 +6,13 @@ member Frontend Engineer di [TLab](https://tlab.co.id/)!
 Dokumentasi ini terus aktif dikembangkan. Jika mempunyai feedback atau kritik saran
 silahkan hubungi **TEAM FRONTEND**
 
+## Frontend Roadmap
+More information about frontend path - [roadmap.sh](https://roadmap.sh/frontend)
+
 ## Standard Tools
 * CSS Framework: [Tailwind](https://tailwindcss.com/)
 * Use shadcn for base component
-  - [Official](https://ui.shadcn.com/)
+  - [Official/React](https://ui.shadcn.com/)
   - [Vue](https://www.shadcn-vue.com/)
 
 ## Coding Rules
@@ -29,28 +32,27 @@ silahkan hubungi **TEAM FRONTEND**
       arrowParens: "always",
     };
     ```
-- Use Husky + Lint-Staged? _(only check changed files)_
+- Use [Husky](https://github.com/typicode/husky) + Lint-Staged? _(only check changed files)_
   - Run ESLint dan Prettier before commit
   - Run unit test before push
   - Check the commit message format to ensure it complies with standards (conventional commits, commitlint)
 - Write [data-testid](https://docs.google.com/presentation/d/1DLnmBa7nQ6tQJg-8rFb8IALGuNM5WuUVgG-km-Ie0qI/edit?usp=sharing) to make it easier for teams to unit test and E2E testing.
-- Write unit test minimum 10% coverage
+- Write unit test minimum 10% coverage. [SonarQube](https://sonarqube.tlab.co.id/)
 - Security Standart
-  - OWASP Top 10. [More](https://owasp.org/www-project-top-ten/)
+    - When saving data in the browser (Local Storage, Cookies, Session, etc)
+      encrypt the data using [Encrypt Storage](https://www.npmjs.com/package/encrypt-storage)
+    - OWASP Top 10. [Read More](https://owasp.org/www-project-top-ten/)
 - Use AI to help you with your works:
   - [JetBrains](/documentation/jetbrains-ide/)
   - [Copilot](https://github.com/features/copilot)
   - [v0](https://v0.dev/)
-  - etc...
-  
-## Frontend Roadmap
-
-More information about frontend path - [roadmap.sh](https://roadmap.sh/frontend)
+  - ...
 
 ## Boilerplate
-* [VueJs](https://git.tlab.co.id/tlab-internal-system/standart-pattern/vue-js-standart-pattern)
-* ReactJs
-
+* Bamboo DSL (Base Shadcn)
+  * [ReactJs](https://git.tlab.co.id/fsfe/frontend-boilerplates/bamboo-react)
+  * [VueJs](https://git.tlab.co.id/fsfe/frontend-boilerplates/bamboo-vue-3)
+* [VueJs V1](https://git.tlab.co.id/tlab-internal-system/standart-pattern/vue-js-standart-pattern)
 
 ## Read More, Learn More!
 * [100+ Web Development Things you Should Know](https://youtu.be/erEgovG9WBs?si=WPCSPyNUAZSrNwmd)
