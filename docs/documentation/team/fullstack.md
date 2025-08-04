@@ -38,8 +38,8 @@ Gunakan peta pembelajaran ini untuk membantumu memahami alur karier dan penguasa
 
 ## 📂 Dokumentasi Terkait
 
-* [📄 Backend Engineer Handbook](../backend.md)
-* [📄 Frontend Engineer Handbook](../frontend.md)
+* [📄 Backend Engineer Handbook](/documentation/team/backend)
+* [📄 Frontend Engineer Handbook](/documentation/team/frontend)
 
 ---
 

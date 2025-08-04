@@ -56,7 +56,7 @@ Informasi lengkap tentang alur pembelajaran dan pengembangan Frontend:
 
 ## ✍️ Coding Rules
 
-* Gunakan [Conventional Commits](/documentation/conventional-commits/)
+* Gunakan [Conventional Commits](/documentation/guidelines/conventional-commits)
 * Gunakan **ESLint** + [Prettier](https://docs.google.com/presentation/d/1-wl5EFMKC_lxBDdTdsSSNAb_6OrQZ4D1dGke-9XoZ8E/edit?usp=sharing)
 
 ```js
@@ -114,7 +114,7 @@ Gunakan boilerplate resmi TLab sebagai dasar pengembangan frontend:
 
 * Gunakan AI untuk mempercepat pengembangan:
 
-  * [JetBrains AI](/documentation/jetbrains-ide/)
+  * [JetBrains AI](/documentation/guidelines/jetbrains-ide)
   * [GitHub Copilot](https://github.com/features/copilot)
   * [v0 by Vercel](https://v0.dev/)
 

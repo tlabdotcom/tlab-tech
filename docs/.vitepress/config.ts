@@ -35,9 +35,9 @@ export default defineConfig({
         {
           text: 'Team',
           items: [
-            { text: 'Backend Engineer', link: '/documentation/team/backend.md' },
-            { text: 'Frontend Engineer', link: '/documentation/team/frontend.md' },
-            { text: 'Fullstack Engineer', link: '/documentation/team/fullstack.md' }
+            { text: 'Backend Engineer', link: '/documentation/team/backend' },
+            { text: 'Frontend Engineer', link: '/documentation/team/frontend' },
+            { text: 'Fullstack Engineer', link: '/documentation/team/fullstack' }
           ]
         },
         {
