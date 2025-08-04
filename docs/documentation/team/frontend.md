@@ -1,62 +1,136 @@
-# Selamat Datang, Sobat Amazing!
+# 📗 Frontend Engineer Handbook
 
-Welcome, dokumentasi ini menyediakan basic set guideline untuk Sobat Amazing
-member Frontend Engineer di [TLab](https://tlab.co.id/)!
+Selamat datang, Sobat Amazing! 👋
 
-Dokumentasi ini terus aktif dikembangkan. Jika mempunyai feedback atau kritik saran
-silahkan hubungi **TEAM FRONTEND**
+Dokumentasi ini menyediakan basic set guideline untuk Sobat Amazing member **Frontend 
+Engineer** di [TLab](https://tlab.co.id/)!
 
-## Frontend Roadmap
-More information about frontend path - [roadmap.sh](https://roadmap.sh/frontend)
+Dokumentasi ini aktif dikembangkan dan mencakup berbagai topik mulai dari standar pengembangan, setup project, workflow, hingga best practices.
 
-## Standard Tools
-* CSS Framework: [Tailwind](https://tailwindcss.com/)
-* Use shadcn for base component
-  - [Official/React](https://ui.shadcn.com/)
-  - [Vue](https://www.shadcn-vue.com/)
+Jika mempunyai feedback atau kritik saran silakan hubungi **TEAM FRONTEND**.
 
-## Coding Rules
+---
 
-- Use [Conventional Commits](/documentation/conventional-commits/)
+## 🔍 Daftar Isi
 
-- Use ESLint + [Prettier](https://docs.google.com/presentation/d/1-wl5EFMKC_lxBDdTdsSSNAb_6OrQZ4D1dGke-9XoZ8E/edit?usp=sharing)
-  * Prettier Config
-    ```
-    const config = {
-      trailingComma: "es5",
-      tabWidth: 2,
-      semi: true,
-      singleQuote: false,
-      bracketSpacing: true,
-      printWidth: 120,
-      arrowParens: "always",
-    };
-    ```
-- Use [Husky](https://github.com/typicode/husky) + Lint-Staged? _(only check changed files)_
-  - Run ESLint dan Prettier before commit
-  - Run unit test before push
-  - Check the commit message format to ensure it complies with standards (conventional commits, commitlint)
-- Write [data-testid](https://docs.google.com/presentation/d/1DLnmBa7nQ6tQJg-8rFb8IALGuNM5WuUVgG-km-Ie0qI/edit?usp=sharing) to make it easier for teams to unit test and E2E testing.
-- Write unit test minimum 10% coverage. [SonarQube](https://sonarqube.tlab.co.id/)
-- Security Standart
-    - When saving data in the browser (Local Storage, Cookies, Session, etc)
-      encrypt the data using [Encrypt Storage](https://www.npmjs.com/package/encrypt-storage)
-    - OWASP Top 10. [Read More](https://owasp.org/www-project-top-ten/)
-- Use AI to help you with your works:
-  - [JetBrains](/documentation/jetbrains-ide/)
-  - [Copilot](https://github.com/features/copilot)
-  - [v0](https://v0.dev/)
-  - ...
+* [Frontend Roadmap](#frontend-roadmap)
+* [Standard Tools](#standard-tools)
+* [Coding Rules](#coding-rules)
+* [Security Standard](#security-standard)
+* [Boilerplate](#boilerplate)
+* [Documentation & Tools](#documentation--tools)
+* [Read More, Learn More!](#read-more-learn-more)
 
-## Boilerplate
-* Bamboo DSL (Base Shadcn)
+---
+
+## 🛤️ Frontend Roadmap
+
+Informasi lengkap tentang alur pembelajaran dan pengembangan Frontend:
+
+* [roadmap.sh/frontend](https://roadmap.sh/frontend)
+
+---
+
+## 🧰 Standard Tools
+
+* **CSS Framework**: [Tailwind](https://tailwindcss.com/)
+* **Base Components**:
+
+  * [ShadCN React](https://ui.shadcn.com/)
+  * [ShadCN Vue](https://www.shadcn-vue.com/)
+* **State Management**:
+
+  * React: Zustand / Tanstack
+  * Vue: Pinia
+* **Routing**:
+
+  * React: React Router
+  * Vue: Vue Router
+* **Data Fetching**: Axios, TanStack Query
+* **Form Validation**:
+
+  * React: React Hook Form / Zod
+  * Vue: Vuelidate / Zod
+
+---
+
+## ✍️ Coding Rules
+
+* Gunakan [Conventional Commits](/documentation/conventional-commits/)
+* Gunakan **ESLint** + [Prettier](https://docs.google.com/presentation/d/1-wl5EFMKC_lxBDdTdsSSNAb_6OrQZ4D1dGke-9XoZ8E/edit?usp=sharing)
+
+```js
+const config = {
+  trailingComma: "es5",
+  tabWidth: 2,
+  semi: true,
+  singleQuote: false,
+  bracketSpacing: true,
+  printWidth: 120,
+  arrowParens: "always",
+};
+```
+
+* Gunakan **[Husky](https://github.com/typicode/husky)** + **Lint-Staged** untuk:
+
+  * Menjalankan ESLint dan Prettier sebelum commit
+  * Menjalankan unit test sebelum push
+  * Memastikan commit message sesuai [conventional commits](https://www.conventionalcommits.org/)
+
+* Tambahkan `data-testid` di komponen untuk mempermudah unit test dan E2E test
+
+* Tulis unit test dengan minimal 10% coverage
+
+  * Cek dengan [SonarQube](https://sonarqube.tlab.co.id/)
+
+---
+
+## 🔐 Security Standard
+
+* Saat menyimpan data di browser (Local Storage, Cookies, Session, dll), **harus di-enkripsi**
+
+  * Gunakan [Encrypt Storage](https://www.npmjs.com/package/encrypt-storage)
+* Pahami dan hindari celah keamanan berdasarkan **OWASP Top 10**
+
+  * [owasp.org/www-project-top-ten](https://owasp.org/www-project-top-ten/)
+
+---
+
+## 🧱 Boilerplate
+
+Gunakan boilerplate resmi TLab sebagai dasar pengembangan frontend:
+
+* **\[Bamboo DSL (Shadcn Based)]**
+
   * [ReactJs](https://git.tlab.co.id/fsfe/frontend-boilerplates/bamboo-react)
   * [VueJs](https://git.tlab.co.id/fsfe/frontend-boilerplates/bamboo-vue-3)
-* [VueJs V1](https://git.tlab.co.id/tlab-internal-system/standart-pattern/vue-js-standart-pattern)
+* Legacy:
 
-## Read More, Learn More!
-* [100+ Web Development Things you Should Know](https://youtu.be/erEgovG9WBs?si=WPCSPyNUAZSrNwmd)
+  * [VueJs V1](https://git.tlab.co.id/tlab-internal-system/standart-pattern/vue-js-standart-pattern)
+
+---
+
+## 📚 Documentation & Tools
+
+* Gunakan AI untuk mempercepat pengembangan:
+
+  * [JetBrains AI](/documentation/jetbrains-ide/)
+  * [GitHub Copilot](https://github.com/features/copilot)
+  * [v0 by Vercel](https://v0.dev/)
+
+* Workflow:
+  * Gitflow, Branch Strategy [Atlassian Gitflow Guide](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+
+---
+
+## 📖 Read More, Learn More!
+
+* [100+ Web Development Things You Should Know](https://youtu.be/erEgovG9WBs?si=WPCSPyNUAZSrNwmd)
 * [19 Essential Tools for Front End Developers](https://www.wearedevelopers.com/magazine/best-tools-for-front-end-development)
 * [Frontend Performance Best Practices](https://roadmap.sh/best-practices/frontend-performance)
 * [Code Review Best Practices](https://roadmap.sh/best-practices/code-review)
-* [Metodologi CSS](https://docs.google.com/presentation/d/1-qKMeKUKqUEsJE3onUYg7HXuimBFDkOWaEs9FAavups/edit#slide=id.g7c763257d0_0_0)
+* [Metodologi CSS (BEM, OOCSS, dsb)](https://docs.google.com/presentation/d/1-qKMeKUKqUEsJE3onUYg7HXuimBFDkOWaEs9FAavups/edit#slide=id.g7c763257d0_0_0)
+
+---
+
+Happy Coding, Sobat Amazing 🚀

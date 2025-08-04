@@ -43,12 +43,18 @@ export default defineConfig({
         {
           text: 'Guidelines',
           items: [
-            { text: 'REST API', link: '/documentation/rest/' },
-            { text: 'Semantic Versioning', link: '/documentation/semver/' },
-            { text: 'Format Database', link: '/documentation/database-format/' },
-            { text: 'Naming Convention', link: '/documentation/naming-convention/' },
-            { text: 'Conventional Commits', link: '/documentation/conventional-commits/' },
-            { text: 'Penggunaan JetBrains IDE', link: '/documentation/jetbrains-ide/' }
+            { text: 'REST API', link: '/documentation/guidelines/rest' },
+            { text: 'Semantic Versioning', link: '/documentation/guidelines/semver' },
+            { text: 'Format Database', link: '/documentation/guidelines/database-format' },
+            { text: 'Naming Convention', link: '/documentation/guidelines/naming-convention' },
+            { text: 'Conventional Commits', link: '/documentation/guidelines/conventional-commits' },
+            { text: 'Penggunaan JetBrains IDE', link: '/documentation/guidelines/jetbrains-ide' }
+          ]
+        },
+        {
+          text: 'SOP',
+          items: [
+            { text: 'Web Company Profile', link: '/documentation/sop/frontend-company-profile' },
           ]
         },
         {

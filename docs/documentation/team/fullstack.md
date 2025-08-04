@@ -1,22 +1,48 @@
-# Selamat Datang, Sobat Amazing!
+# 📗 Fullstack Engineer Handbook
 
-Welcome, dokumentasi ini menyediakan basic set guideline untuk Sobat Amazing
-member Fullstack Engineer di [TLab](https://tlab.co.id/)!
+Selamat datang, Sobat Amazing! 👋
+Dokumentasi khusus untuk **Fullstack Engineer** di [TLab](https://tlab.co.id/)! 🎉
 
-Dokumentasi ini terus aktif dikembangkan. Jika mempunyai feedback atau kritik saran
-silahkan hubungi **TEAM FULLSTACK**
+Dokumentasi ini berisi panduan dasar, referensi pembelajaran, dan sumber daya penting untuk membantumu menjadi Fullstack Engineer yang efektif dan produktif di lingkungan kerja TLab.
 
-## Fullstack Roadmap
+> 📌 *Dokumentasi ini akan terus diperbarui secara berkala. Jika kamu memiliki feedback, ide, atau saran perbaikan, silakan hubungi **Team Fullstack**.*
 
-More information about fullstack path - [roadmap.sh](https://roadmap.sh/full-stack)
+---
 
-## Read More, Learn More!
-### General
-* [100+ Web Development Things you Should Know](https://youtu.be/erEgovG9WBs?si=WPCSPyNUAZSrNwmd)
-* [Code Review Best Practices](https://roadmap.sh/best-practices/code-review)
-### Backend
-* [Backend Performance Best Practices](https://roadmap.sh/best-practices/backend-performance)
-* [API Security Best Practices](https://roadmap.sh/best-practices/api-security)
-### Frontend
-* [Frontend Performance Best Practices](https://roadmap.sh/best-practices/frontend-performance)
-* [Metodologi CSS](https://docs.google.com/presentation/d/1-qKMeKUKqUEsJE3onUYg7HXuimBFDkOWaEs9FAavups/edit#slide=id.g7c763257d0_0_0)
+## 🧭 Fullstack Roadmap
+
+Gunakan peta pembelajaran ini untuk membantumu memahami alur karier dan penguasaan teknologi Fullstack:
+
+🔗 [roadmap.sh/full-stack](https://roadmap.sh/full-stack)
+
+---
+
+## 📚 Resource & Pembelajaran
+
+### 📘 General
+
+* [🎥 100+ Web Development Things You Should Know](https://youtu.be/erEgovG9WBs?si=WPCSPyNUAZSrNwmd)
+* [✅ Code Review Best Practices](https://roadmap.sh/best-practices/code-review)
+
+### ⚙️ Backend
+
+* [🚀 Backend Performance Best Practices](https://roadmap.sh/best-practices/backend-performance)
+* [🔐 API Security Best Practices](https://roadmap.sh/best-practices/api-security)
+
+### 🎨 Frontend
+
+* [⚡ Frontend Performance Best Practices](https://roadmap.sh/best-practices/frontend-performance)
+* [🎨 Metodologi CSS (Google Slides)](https://docs.google.com/presentation/d/1-qKMeKUKqUEsJE3onUYg7HXuimBFDkOWaEs9FAavups/edit#slide=id.g7c763257d0_0_0)
+
+---
+
+## 📂 Dokumentasi Terkait
+
+* [📄 Backend Engineer Handbook](../backend.md)
+* [📄 Frontend Engineer Handbook](../frontend.md)
+
+---
+
+Teruslah belajar dan berkontribusi! 🚀
+
+> “Great engineers never stop learning.”
