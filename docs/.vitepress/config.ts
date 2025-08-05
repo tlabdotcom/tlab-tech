@@ -54,6 +54,7 @@ export default defineConfig({
         {
           text: 'SOP',
           items: [
+            { text: 'Admin Dashboard', link: '/documentation/sop/frontend-admin-dashboard' },
             { text: 'Web Company Profile', link: '/documentation/sop/frontend-company-profile' },
           ]
         },

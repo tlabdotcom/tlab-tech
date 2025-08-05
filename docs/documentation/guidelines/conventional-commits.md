@@ -14,7 +14,7 @@
 
 ```
 
-### Type
+## Type
 * ```feat```: A new feature
 * ```fix```: A bug fix
 * ```refactor```: A code that neither fix bug nor adds a feature. (eg: You can use this when there is semantic changes like renaming a variable/ function name)
@@ -26,18 +26,18 @@
 * ```ops```: Affect operational components like infrastructure, deployment, backup, recovery, ...
 * ```chore``` Miscellaneous commits e.g. modifying ```.gitignore```
 
-### Scope
+## Scope
 The ```scope``` provides additional contextual information.
 * Is an **optional** part of the format
 * Allowed Scopes depends on the specific project
 * Don't use issue identifiers as scopes
 
-### Breaking Changes Indicator
+## Breaking Changes Indicator
 Breaking changes should be indicated by an `!` before the `:` in the subject line e.g. `feat(api)!: remove status endpoint`
 
 * Is an *optional* part of the format
 
-### Description
+## Description
 The `description` contains a concise description of the change.
 
 * Is a *mandatory* part of the format
@@ -46,7 +46,7 @@ The `description` contains a concise description of the change.
 * Don't capitalize the first letter
 * No dot (.) at the end
 
-### Body
+## Body
 The `body` should include the motivation for the change and contrast this with previous behavior.
 
 * Is an *optional* part of the format
@@ -54,14 +54,14 @@ The `body` should include the motivation for the change and contrast this with p
 * This is the place to mention issue identifiers and their relations
 
 
-### Footer
+## Footer
 The `footer` should contain any information about Breaking Changes and is also the place to reference Issues that this commit refers to.
 
 * Is an *optional* part of the format
 * *optionally* reference an issue by its id.
 * *Breaking Changes* should start with the word `BREAKING CHANGES:` followed by space or two newlines. The rest of the commit message is then used for this.
 
-### Examples
+## Examples
 * 
 	```
 	feat: add email notifications on new direct messages
