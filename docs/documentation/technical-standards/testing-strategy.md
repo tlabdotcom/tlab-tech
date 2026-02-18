@@ -36,7 +36,9 @@ Untuk menjaga konsistensi antar _project_, berikut adalah standar _tools_ yang k
 
 ## 3. Best Practices Penulisan Tes
 
+::: tip 💡 Best Practices
 Agar tes mudah dibaca oleh _Engineer_ lain (dan diri kamu sendiri di masa depan), patuhi aturan berikut:
+:::
 
 ### A. Pola AAA (Arrange, Act, Assert)
 

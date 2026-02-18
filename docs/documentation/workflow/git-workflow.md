@@ -14,7 +14,9 @@ Ini adalah alur kerja modern yang **sangat disarankan** untuk sebagian besar pro
   - `develop` dan `staging` hanya untuk testing sementara.
   - Masalah "Partial Release" sangat mudah diatasi.
 
+::: tip 🚀 Panduan Lengkap
 👉 **[Baca Panduan Trunk-Based Development](./git-trunk-based.md)**
+:::
 
 ---
 
@@ -28,7 +30,9 @@ Ini adalah alur kerja tradisional yang lebih ketat.
   - Struktur branch lebih kompleks (`develop -> release -> main`).
   - Rentan terhadap "Integration Hell" jika fitur menumpuk di `develop`.
 
+::: tip 🛡️ Panduan Lengkap
 👉 **[Baca Panduan Gitflow](./git-gitflow.md)**
+:::
 
 ---
 

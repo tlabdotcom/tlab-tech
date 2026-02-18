@@ -38,7 +38,11 @@ Gunakan tipe berikut di awal pesan commit kamu:
 1.  **Gunakan Bahasa Inggris Imperatif**: Gunakan kata kerja bentuk perintah (_imperative mood_).
     - ✅ Benar: "add...", "fix...", "change..."
     - ❌ Salah: "added...", "fixed...", "changing..."
-    - 💡 **Tips**: Baca commit message kamu dengan awalan _"If applied, this commit will..."_ (Jika diterapkan, commit ini akan...). Kalimatnya harus nyambung.
+
+    ::: tip 💡 Tips
+    Baca commit message kamu dengan awalan _"If applied, this commit will..."_ (Jika diterapkan, commit ini akan...). Kalimatnya harus nyambung.
+    :::
+
 2.  **Huruf Kecil Semua**: Gunakan huruf kecil untuk `<tipe>` dan awal `<deskripsi>`.
     - `feat: add new button` (bukan `Feat: Add new button`)
 3.  **Tanpa Titik di Akhir**: Jangan gunakan tanda titik (.) di akhir baris deskripsi singkat.
